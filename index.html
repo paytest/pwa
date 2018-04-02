@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<script>
+
+window.addEventListener('load', () => {
+  document.getElementById('add').addEventListener('click', () => {
+    const url = document.getElementById('url').value;
+    const icon = document.getElementById('icon').value;
+    const title = document.getElementById('title').value;
+    location.href = `pwa://install/?title=${title}&url=${url}&icon=${icon}`;
+  });
+});
+
+</script>
+</head>
+<body>
+Site URL  : <input type="text" id="url" value="https://www.naver.com"><br>
+Icon URL  : <input type="text" id="icon" value="https://www.chromium.org/_/rsrc/1438879449147/config/customLogo.gif"><br>
+PWA Title : <input type="text" id="title" value="Yaho!"><br>
+<input type="button" id="add" value="Add">
+</form>
+</body>
+</html>
