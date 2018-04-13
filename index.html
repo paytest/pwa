@@ -9,7 +9,8 @@ window.addEventListener('load', () => {
     const url = document.getElementById('url').value;
     const icon = document.getElementById('icon').value;
     const title = document.getElementById('title').value;
-    location.href = `shubapi://addshortcut/?title=${title}&url=${url}&icon=${icon}`;
+    const appId = document.getElementById('appId').value;
+    location.href = `shubapi://addshortcut/?appId=${appId}&title=${title}&url=${url}&icon=${icon}`;
   });
 });
 
@@ -19,7 +20,7 @@ window.addEventListener('load', () => {
 Site URL  : <input type="text" id="url" value="https://instasee.me/"><br>
 Icon URL  : <input type="text" id="icon" value="https://instasee.me/shareimage.jpg"><br>
 PWA Title : <input type="text" id="title" value="Instasee"><br>
-App ID    : <input type="text" id="title" value="SbGjeH38Jkoz3Fuam"><br>
+App ID    : <input type="text" id="appId" value="SbGjeH38Jkoz3Fuam"><br>
 <input type="button" id="add" value="Add">
 </form>
 </body>
